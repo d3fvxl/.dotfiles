@@ -5,13 +5,9 @@ Personal dotfiles managed with [doot](https://github.com/Phydon/doot).
 ## 📦 What's Included
 
 - **Hyprland** - Window manager configuration
-  - Monitor setup
-  - Workspace configuration
-  - Window rules
-  - Keybindings
-- **Zed** - Code editor keymaps
-- **Neovim** - LazyVim configuration
-- **Waybar** - Status bar configuration
+- **Waybar** - Status bar
+- **Zed** - Code editor
+- **Neovim** - Text editor (LazyVim)
 
 ## 🚀 Quick Start
 
@@ -22,80 +18,46 @@ cd ~/.dotfiles
 doot install
 ```
 
-This will create symlinks from `~/.config/` to the dotfiles in this repository.
+This creates symlinks from `~/.config/` to your dotfiles.
 
-### Add new dotfiles
-
-To add a new config file or directory to this repository:
+### Add new configuration
 
 ```bash
-# Add single files
-doot add ~/.config/waybar/*
+# Add files from a directory
+doot add ~/.config/app-name/*
 
-# Add entire directory contents
-doot add ~/.config/some-app/*
+# Add specific files
+doot add ~/.config/app/config.file
 ```
 
-This will:
-1. Move the files from `~/.config/` to `~/.dotfiles/config/`
-2. Create symlinks back to `~/.config/`
-
-### List installed dotfiles
+### Manage dotfiles
 
 ```bash
-doot ls
+doot ls          # List installed dotfiles
+doot clean       # Remove all symlinks
+doot restore     # Replace symlinks with actual files
 ```
 
-### Remove symlinks
-
-```bash
-doot clean
-```
-
-### Restore original files
-
-If you want to replace symlinks with the actual files:
-
-```bash
-doot restore <file>
-```
-
-## 📋 Workspace Layout
-
-### Main Monitor (HDMI-A-1) - Workspaces 1-5
-- **1**: Zed editor
-- **2**: Alacritty terminal, Chromium browser
-- **3-5**: Available for other apps
-
-### Utility Monitor (DP-1) - Workspaces 6-9
-- **6**: Telegram
-- **7**: Available (media/music)
-- **8**: Available (monitoring)
-- **9**: Throne VPN
-
-## ⌨️ Key Bindings
-
-- `Super + 1-9` - Switch to workspace
-- `Super + Shift + 1-9` - Move window to workspace
-- `Super + H/J/K/L` - Move focus (Vim-style)
-- `Super + Shift + H/J/K/L` - Swap windows
-
-## 🔧 Configuration Files
-
-All configuration files are in the `config/` directory, organized by application:
+## 📁 Structure
 
 ```
 .dotfiles/
 ├── config/
-│   ├── hypr/           # Hyprland window manager
-│   ├── nvim/           # Neovim editor
-│   ├── waybar/         # Status bar
-│   └── zed/            # Zed editor
+│   ├── hypr/       # Hyprland
+│   ├── waybar/     # Status bar
+│   ├── zed/        # Code editor
+│   └── nvim/       # Neovim
 └── README.md
 ```
 
-## 📝 Notes
+## 📝 How It Works
 
-- Symlinks are automatically managed by doot
-- Changes made to files in `~/.config/` are reflected in this repository
-- Use `git` to track and version your dotfiles
+- **doot** manages symlinks automatically
+- Edit files in `~/.config/` - changes reflect in this repo
+- Track changes with git
+- Restore your setup on any machine with `doot install`
+
+## 🔗 Resources
+
+- [doot documentation](https://github.com/Phydon/doot)
+- Configuration-specific details are in each application's config files
