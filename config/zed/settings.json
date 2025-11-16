@@ -45,22 +45,22 @@
     },
 
     "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4.5"
+        },
+        "model_parameters": []
     },
-    "model_parameters": []
-  },
     "show_edit_predictions": true,
     "languages": {
         "Python": {
             "language_servers": ["ruff", "basedpyright", "!pyright"],
             "formatter": [
                 {
-                    "code_actions": {
-                        "source.organizeImports.ruff": true,
-                        "source.fixAll.ruff": true
-                    }
+                    "code_action": "source.organizeImports.ruff"
+                },
+                {
+                    "code_action": "source.fixAll.ruff"
                 },
                 {
                     "language_server": {
@@ -166,7 +166,7 @@
         "metrics": false
     },
     "vim_mode": true,
-    "relative_line_numbers": true,
+    "relative_line_numbers": "enabled",
     "scrollbar": {
         "show": "never"
     },

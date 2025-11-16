@@ -6,6 +6,13 @@
 			"ctrl-/": "workspace::ToggleBottomDock"
 		}
 	},
+	// Close with ctrl-w in Terminal
+	{
+		"context": "Terminal",
+		"bindings": {
+			"ctrl-w": "workspace::ToggleBottomDock"
+		}
+	},
 	// Window's navigation
 	{
 		"context": "Dock || Terminal || Editor",
@@ -27,7 +34,8 @@
 		"context": "AgentPanel",
 		"bindings": {
 			"ctrl-\\": "workspace::ToggleRightDock",
-			"cmd-k": "workspace::ToggleRightDock"
+			"cmd-k": "workspace::ToggleRightDock",
+			"ctrl-w": "workspace::ToggleRightDock"
 		}
 	},
 	// File panel (netrw)
@@ -130,6 +138,9 @@
 			"space 0": "pane::ActivateLastItem",
 			"] b": "pane::ActivateNextItem",
 			"[ b": "pane::ActivatePreviousItem",
+			// Buffer navigation (LazyVim style)
+			"shift-h": "pane::ActivatePreviousItem",
+			"shift-l": "pane::ActivateNextItem",
 			"space ,": "tab_switcher::Toggle",
 			// Jump to the previous location
 			"space b b": "pane::AlternateFile",
@@ -168,6 +179,7 @@
 			"space w v": "pane::SplitRight",
 			"space -": "pane::SplitDown",
 			"space |": "pane::SplitRight",
+			"ctrl-w": "pane::CloseActiveItem",
 			"space w c": "pane::CloseAllItems",
 			"space w d": "pane::CloseAllItems",
 			// Jump to hunks
