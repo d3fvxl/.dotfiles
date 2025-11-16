@@ -8,6 +8,7 @@
   "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
     "group/tray-expander",
+    "hyprland/language",
     "bluetooth",
     "network",
     "pulseaudio",
@@ -132,5 +133,11 @@
   "tray": {
     "icon-size": 12,
     "spacing": 17
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "keyboard-name": "zsa-technology-labs-moonlander-mark-i"
   }
 }
