@@ -8,12 +8,12 @@
   "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
     "group/tray-expander",
-    "hyprland/language",
     "bluetooth",
     "network",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "hyprland/language"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
