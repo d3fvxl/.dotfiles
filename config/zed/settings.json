@@ -242,7 +242,7 @@
     "file_scan_inclusions": [".env"],
     // Move all panel to the right
     "project_panel": {
-        "hide_hidden": true,
+        "hide_hidden": false,
         "button": false,
         "default_width": 300,
         "dock": "left",
